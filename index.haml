@@ -9,22 +9,18 @@
         top: 0
         bottom: 0
         li
-          display: inline-block
+          display: table
           height: 100%
-          div
-            display: table
-            height: 100%
-            a
-              display: table-cell
-              vertical-align: middle
-              padding: 10px
+          float: left
+          a
+            display: table-cell
+            vertical-align: middle
+            padding: 10px
 
   %body
     %ul
       - 5.times do |n|
         %li 
-          %div
-            %a{href: 'https://github.com/bkerley/full-height-menu', style: "background-color: ##{(0x101 * n).+(0xA0A).to_s(16)}"} item #{n} #{'xxxxx' * n}
+          %a{href: 'https://github.com/bkerley/full-height-menu', style: "background-color: ##{(0x101 * n).+(0xA0A).to_s(16)}"} item #{n} #{'xxxxx' * n}
       %li
-        %div
-          %a{href: 'https://github.com/bkerley/full-height-menu', style: 'background-color: #0f4'} see my github
+        %a{href: 'https://github.com/bkerley/full-height-menu', style: 'background-color: #0f4'} see my github
