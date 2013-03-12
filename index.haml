@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %title full-height-menu
+    :sass
+      ul
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: 0
+        padding: 0
+        list-style-type: none
+        height: 100%
+        li
+          display: inline-block
+          position: relative
+          top: 0
+          bottom: 0
+
+  %body
+    %ul
+      - 5.times do |n|
+        %li 
+          %a{href: 'http://brycekerley.net', style: "background-color: ##{(0x101 * n).+(0xA0A).to_s(16)}"} menu item #{n}
