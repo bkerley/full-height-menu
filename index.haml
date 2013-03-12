@@ -4,21 +4,24 @@
     %title full-height-menu
     :sass
       ul
+        display: block
         position: absolute
         top: 0
         bottom: 0
-        margin: 0
-        padding: 0
-        list-style-type: none
-        height: 100%
         li
           display: inline-block
-          position: relative
-          top: 0
-          bottom: 0
+          height: 100%
+          div
+            display: table
+            height: 100%
+            a
+              display: table-cell
+              vertical-align: middle
+              padding: 10px
 
   %body
     %ul
       - 5.times do |n|
         %li 
-          %a{href: 'http://brycekerley.net', style: "background-color: ##{(0x101 * n).+(0xA0A).to_s(16)}"} menu item #{n}
+          %div
+            %a{href: 'http://brycekerley.net', style: "background-color: ##{(0x101 * n).+(0xA0A).to_s(16)}"} menu item #{n} #{'xxxxx' * n}
